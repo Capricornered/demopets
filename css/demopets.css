@@ -756,12 +756,10 @@ button[type=submit] {
     .links a {
         text-decoration: none;
         color: #ffffff;
-        cursor: pointer;
     }
     .links a:hover {
         color: #F99FFF;
         transition: 0.3s;
-        cursor: pointer;
     }
     .links li li a:hover {
         text-decoration: none;
@@ -780,7 +778,7 @@ button[type=submit] {
     .drop1, .drop2, .drop3, .drop4, .drop5 {
         width: 15vw;
         color: #ffffff;
-        cursor: pointer;
+        cursor: default;
     }
     .drop1:hover, .drop2:hover, .drop3:hover, .drop4:hover, .drop5:hover {
         color: #F99FFF;
@@ -1265,7 +1263,7 @@ button[type=submit] {
     .drop1, .drop2, .drop3, .drop4, .drop5 {
         width: 14vw;
         color: #ffffff;
-        cursor: pointer;
+        cursor: default;
     }
     .drop1:hover, .drop2:hover, .drop3:hover, .drop4:hover, .drop5:hover {
         color: #F99FFF;
