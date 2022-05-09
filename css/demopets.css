@@ -97,7 +97,60 @@ body {
     display: none;
 }
 
+/*for page sections with orange border*/
+.orange {
+    box-sizing: border-box;
+    font-size: 1em;
+    border: 0.6em solid #FFB56C;
+    border-radius: 30px;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 2;
+    text-align: left;
+    padding: .3em 1em;
+}
+.orange h2 {
+    font-family: marvin-round, sans-serif;
+    color: #9250C5;
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+}
+
+/*for page sections with purple border*/
+.purple {
+    box-sizing: border-box;
+    font-size: 1em;
+    border: 0.6em solid #9250C5;
+    border-radius: 30px;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    padding: .3em 1em;
+}
+.purple h2 {
+    font-family: marvin-round, sans-serif;
+    color: #FFB56C;
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+}
+
+/*center elements that don't require other styling*/
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+hr {
+    background-color: #9250C5;
+}
+
 /*HEADER*/
+
 .head {
     position: sticky;
     background-color: #ffffff;
@@ -396,36 +449,17 @@ body {
 
 /*-----------MY ACCOUNT-----------*/
 
-.acct {
-    box-sizing: border-box;
-    font-size: 1em;
-    border: 0.6em solid #FFB56C;
-    border-radius: 30px;
-    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row: 2;
-    text-align: left;
-    padding: .3em 1em;
-}
-.acct h2 {
-    font-family: marvin-round, sans-serif;
-    color: #9250C5;
-    font-size: 2em;
-    margin: 0;
-    text-align: center;
-}
-.acct hr {
+#acct hr {
     clear: both;
     border: 1px solid rgba(76, 37, 105, 0.432);
 }
-.acct form {
+#acct form {
     margin: 0 auto;
 }
-.acct label {
+#acct label {
     font-weight: 500;
 }
-.acct input, .acct select {
+#acct input, #acct select {
     float: right;
     margin-right: 1em;
     border: 2px solid #F99FFF;
@@ -434,7 +468,7 @@ body {
     padding-right: 1em;
     width: 60%;
 }
-.acct select {
+#acct select {
     background-color: #ffffff;
     cursor: pointer;
 }
@@ -451,11 +485,11 @@ button[type=submit] {
     margin-bottom: 10px;
     cursor: pointer;
 }
-.acct button:hover {
+#acct button:hover {
     background-color: #9250C5;
     transition: 0.3s;
 }
-.acct textarea {
+#acct textarea {
     border: 2px solid #F99FFF;
     border-radius: 1em;
     padding: .8em;
@@ -472,46 +506,28 @@ button[type=submit] {
 
 /*-----------OUR TEAM-----------*/
 
-.team {
-    box-sizing: border-box;
-    font-size: 1em;
-    border: 0.6em solid #9250C5;
-    border-radius: 30px;
-    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 6;
-}
 .wrapper {
     overflow: auto;
     height: 90%;
     padding: 1em;
 }
-.team h2 {
-    font-family: marvin-round, sans-serif;
-    color: #FFB56C;
-    font-size: 2em;
-    margin: 0;
-    text-align: center;
-}
-.team h3 {
+#team h3 {
     font-size: 1em;
     font-weight: 600;
     text-align: right;
 }
-.team hr {
+#team hr {
     border: 1px solid rgba(76, 37, 105, 0.432);
     width: 90%;
     margin: 0 auto;
     margin-top: .5em;
 }
-.team img {
+#team img {
     display: block;
     width: 85%;
     margin: 0 auto;
 }
-.teamtext {
+#teamtext {
     text-align: left;
     line-height: 1.2em;
     font-weight: 100;
@@ -519,26 +535,7 @@ button[type=submit] {
 
 /*-----------CONTACT US-----------*/
 
-.contact {
-    box-sizing: border-box;
-    font-size: 1em;
-    height: auto;
-    border: 0.6em solid #9250C5;
-    border-radius: 30px;
-    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 6;
-}
-.contact h2 {
-    font-family: marvin-round, sans-serif;
-    color: #FFB56C;
-    font-size: 2em;
-    margin-top: .3em;
-    text-align: center;
-}
-.contact hr {
+#contact hr {
     clear: both;
     border: 1px solid rgba(76, 37, 105, 0.432);
     width: 90%;
@@ -563,10 +560,10 @@ button[type=submit] {
     margin: .5em 1.5em 1em 1.5em;
     font-size: .9em;
 }
-.contact form {
+#contact form {
     margin-left: 1em;
 }
-.contact input {
+#contact input[type=text], #contact input[type=email] {
     float: right;
     width: 60%;
     margin-right: 1em;
@@ -574,10 +571,6 @@ button[type=submit] {
     border-radius: 50em;
     padding-left: 1em;
     padding-right: 1em;
-}
-input[type="radio"] {
-    float: none;
-    width: auto;
 }
 .radio {
     text-align: right;
@@ -595,11 +588,11 @@ button[type=submit] {
     margin-top: 5px;
     margin-bottom: 10px;
 }
-.contact button:hover {
+#contact button:hover {
     background-color: #9250C5;
     transition: 0.3s;
 }
-.contact textarea {
+#contact textarea {
     border: 2px solid #FFB56C;
     border-radius: 1em;
     padding: .8em;
@@ -607,6 +600,62 @@ button[type=submit] {
     height: 5em;
     margin: 0 auto;
     display: block;
+}
+
+/*-----------PROFILE-----------*/
+
+.magenta {
+    box-sizing: border-box;
+    font-size: 1em;
+    border: 0.6em solid #F99FFF;
+    border-radius: 30px;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 2;
+    text-align: left;
+    padding: .3em 1em;
+}
+.magenta h2 {
+    font-family: marvin-round, sans-serif;
+    color: #9250C5;
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+}
+.profile-picture {
+    float: left;
+    width: 6em;
+    margin: auto 1em 1em 1em;
+    border: 1px solid #FFB56C;
+    border-radius: .5em;
+}
+.profile-blurb {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+#profile-pets {
+    grid-row: 3 !important; 
+}
+.pets1 {
+    width: 25vw;
+    border: 1px solid #F99FFF;
+    border-radius: 15px;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+    margin: 1em auto 1em 2em;
+    float: left;
+}
+.pets2 {
+    width: 25vw;
+    border: 1px solid #F99FFF;
+    border-radius: 15px;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+    margin: 1em 2em 1em auto;
+    float: right;
+}
+.pets1:hover, .pets2:hover {
+    opacity: 0.5;
+    transition: 0.2s
 }
 
 /*----------------------TABLET----------------------*/
@@ -639,6 +688,54 @@ button[type=submit] {
     /*hidden items from other views*/
     .userbig, #userbig-home, .pet, #pet-home, .smallbanner, #slide, .menu, .hamburger {
         display: none;
+    }
+
+    /*for page sections with orange border*/
+    .orange {
+        box-sizing: border-box;
+        font-size: 1em;
+        border: 0.6em solid #FFB56C;
+        border-radius: 30px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row: 3;
+        text-align: left;
+        padding: .3em 1em;
+    }
+    .orange h2 {
+        font-family: marvin-round, sans-serif;
+        color: #9250C5;
+        font-size: 2em;
+        margin: 0;
+        text-align: center;
+    }
+
+    /*for page sections with purple border*/
+    .purple {
+        box-sizing: border-box;
+        font-size: 1em;
+        border: 0.6em solid #9250C5;
+        border-radius: 30px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row: 3;
+        text-align: left;
+        padding: .3em 1em;
+    }
+    .purple h2 {
+        font-family: marvin-round, sans-serif;
+        color: #FFB56C;
+        font-size: 2em;
+        margin: 0;
+        text-align: center;
+    }
+
+    /*center elements that don't require other styling*/
+    .center {
+        display: block;
+        margin: 0 auto;
     }
 
     /*HEADER*/
@@ -929,34 +1026,15 @@ button[type=submit] {
 
       /*-----------MY ACCOUNT-----------*/
 
-    .acct {
-        box-sizing: border-box;
-        font-size: 1em;
-        border: 0.6em solid #FFB56C;
-        border-radius: 30px;
-        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row: 3;
-        text-align: left;
-        padding: .3em 1em;
-    }
-    .acct h2 {
-        font-family: marvin-round, sans-serif;
-        color: #9250C5;
-        font-size: 2em;
-        margin: 0;
-        text-align: center;
-    }
-    .acct hr {
+    #acct hr {
         clear: both;
         border: 1px solid rgba(76, 37, 105, 0.432);
     }
-    .acctform {
+    #acctform {
         padding-left: 3em;
         padding-right: 3em;
     }
-    .acctform input, .acctform select {
+    #acctform input, #acctform select {
         float: right;
     }
     input[type=text] {
@@ -964,10 +1042,10 @@ button[type=submit] {
         border-radius: 50em;
         width: 26em;
     }
-    .acct input[type=email] {
+    #acct input[type=email] {
         width: 26em;
     }
-    .acct select {
+    #acct select {
         border: 2px solid #F99FFF;
         border-radius: 50em;
         background-color: #ffffff;
@@ -990,7 +1068,7 @@ button[type=submit] {
         clear: both;
         justify-content: center;
     }
-    .acct textarea {
+    #acct textarea {
         vertical-align: top;
         border: 2px solid #F99FFF;
         border-radius: 1em;
@@ -1004,95 +1082,63 @@ button[type=submit] {
     
     /*-----------TEAM-----------*/
 
-    .team {
-        box-sizing: border-box;
-        font-size: 1em;
-        border: 0.6em solid #9250C5;
-        border-radius: 30px;
-        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row: 3;
-        text-align: left;
-    }
     .wrapper {
         overflow: auto;
         height: 95%;
         padding: 1em;
     }
-    .team h2 {
-        font-family: marvin-round, sans-serif;
-        color: #FFB56C;
-        font-size: 2em;
-        margin: 0;
-        text-align: center;
-    }
-    .team h3 {
+    #team h3 {
         font-size: 1em;
         font-weight: 600;
         text-align: right;
     }
-    .team hr {
+    #team hr {
         border: 1px solid rgba(76, 37, 105, 0.432);
         margin: 0 auto;
         margin-top: .5em;
     }
-    .team img {
+    #team img {
         width: 50%;
     }
     
     /*-----------CONTACT-----------*/
 
-    .contact {
-        box-sizing: border-box;
-        font-size: 1em;
-        height: auto;
-        border: 0.6em solid #9250C5;
-        border-radius: 30px;
-        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row: 3;
-        align-self: flex-start;
-    }
     .blurb {
         font-size: 1em;
         padding-left: 3em;
         padding-right: 3em;
     }
-    .contact h2 {
-        font-family: marvin-round, sans-serif;
-        color: #9250C5;
-        font-size: 2em;
-        margin: 0;
-        text-align: center;
-    }
-    .contact hr {
+    #contact hr {
         clear: both;
         border: 1px solid rgba(76, 37, 105, 0.432);
     }
-    .contact form {
+    #contact form {
         padding-left: 1em;
         padding-right: 1em;
     }
-    .contact form hr {
+    #contact form hr {
         width: 100%;
     }
-    .contact input, .contact select {
+    #contact select {
         float: right;
         margin-right: 0;
     }
-    .contact input[type=text] {
+    #contact input[type=text] {
         border: 2px solid #FFB56C;
         border-radius: 50em;
         padding-left: .8em;
         width: 30em;
         padding-right: .8em;
+        margin-bottom: 1.5em;
+        float: right;
+        margin-right: 0;
     }
-    .contact input[type=email] {
+    #contact input[type=email] {
         width: 30em;
+        float: right;
+        margin-right: 0;
     }
-    .contact textarea {
+    #contact textarea {
         vertical-align: top;
         border: 2px solid #FFB56C;
         border-radius: 1em;
@@ -1103,13 +1149,65 @@ button[type=submit] {
         float: right;
         margin-bottom: 1em;
     }
-    input[type="radio"] {
-        float: none;
-        width: 2em;
-    }
     .radio {
         text-align: right;
         margin-right: 0;
+    }
+
+    /*-----------PROFILE-----------*/
+
+    .magenta {
+        box-sizing: border-box;
+        font-size: 1em;
+        border: 0.6em solid #F99FFF;
+        border-radius: 30px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row: 3;
+        text-align: left;
+        padding: .3em 1em;
+    }
+    .magenta h2 {
+        font-family: marvin-round, sans-serif;
+        color: #9250C5;
+        font-size: 2em;
+        margin: 0;
+        text-align: center;
+    }
+    .profile-picture {
+        float: left;
+        width: 6em;
+        margin: auto 1em 1em 1em;
+        border: 1px solid #FFB56C;
+        border-radius: .5em;
+    }
+    .profile-blurb {
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    #profile-pets {
+        grid-row: 4 !important; 
+    }
+    .pets1 {
+        width: 25vw;
+        border: 1px solid #F99FFF;
+        border-radius: 15px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        margin: 1em auto 1em 4em;
+        float: left;
+    }
+    .pets2 {
+        width: 25vw;
+        border: 1px solid #F99FFF;
+        border-radius: 15px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        margin: 1em 4em 1em auto;
+        float: right;
+    }
+    .pets1:hover, .pets2:hover {
+        opacity: 0.5;
+        transition: 0.2s
     }
 }
 
@@ -1141,6 +1239,7 @@ button[type=submit] {
 
     /*MISC*/
 
+    /*side banners*/
     .side1 {
         position: fixed;
         left: 0;
@@ -1161,9 +1260,60 @@ button[type=submit] {
         border-left: 7px solid #ffb66ca3;
         box-sizing: border-box;
     }
+
     /*hidden items from other views*/
     .smallbanner, #slide, .menu, .hamburger {
         display: none;
+    }
+
+    /*for page sections with orange border*/
+    .orange {
+        box-sizing: border-box;
+        font-size: 1em;
+        border: 0.6em solid #FFB56C;
+        border-radius: 30px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 3;
+        text-align: left;
+        padding: .3em 1em;
+        align-self: flex-start;
+    }
+    .orange h2 {
+        font-family: marvin-round, sans-serif;
+        color: #9250C5;
+        font-size: 2em;
+        margin: 0;
+        text-align: center;
+    }
+
+    /*for page sections with purple border*/
+    .purple {
+        box-sizing: border-box;
+        font-size: 1em;
+        border: 0.6em solid #9250C5;
+        border-radius: 30px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 3;
+        text-align: left;
+        padding: .3em 1em;
+        align-self: flex-start;
+    }
+    .purple h2 {
+        font-family: marvin-round, sans-serif;
+        color: #FFB56C;
+        font-size: 2em;
+        margin: 0;
+        text-align: center;
+    }
+
+    /*center elements that don't require other styling*/
+    .center {
+        display: block;
+        margin: 0 auto;
     }
 
     /*HEADER*/
@@ -1308,7 +1458,8 @@ button[type=submit] {
         box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
         grid-column-start: 4;
         grid-column-end: 4;
-        grid-row: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
         margin-right: 1em;
         align-self: flex-start;
     }
@@ -1352,7 +1503,8 @@ button[type=submit] {
         box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
         grid-column-start: 2;
         grid-column-end: 2;
-        grid-row: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
         align-self: flex-start;
     }
     .pet h2 {
@@ -1567,52 +1719,32 @@ button[type=submit] {
     
     /*-----------MY ACCOUNT-----------*/
 
-    .acct {
-        box-sizing: border-box;
-        font-size: 1em;
-        border: 0.6em solid #FFB56C;
-        border-radius: 30px;
-        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row: 3;
-        text-align: left;
-        padding: .3em 1em;
-        align-self: flex-start;
-    }
-    .acct h2 {
-        font-family: marvin-round, sans-serif;
-        color: #9250C5;
-        font-size: 2em;
-        margin: 0;
-        text-align: center;
-    }
-    .acct hr {
+    #acct hr {
         clear: both;
         border: 1px solid rgba(76, 37, 105, 0.432);
     }
-    .acct form {
+    #acct form {
         padding-left: 1em;
         padding-right: 1em;
     }
-    .acct form hr {
+    #acct form hr {
         width: 100%;
     }
-    .acct input, .acct select {
+    #acct input, #acct select {
         float: right;
         margin-right: 0;
     }
-    .acct input[type=text] {
+    #acct input[type=text] {
         border: 2px solid #F99FFF;
         border-radius: 50em;
         padding-left: .8em;
         width: 15em;
         padding-right: .8em;
     }
-    .acct input[type=email] {
+    #acct input[type=email] {
         width: 15em;
     }
-    .acct select {
+    #acct select {
         border: 2px solid #F99FFF;
         border-radius: 50em;
         background-color: #ffffff;
@@ -1632,7 +1764,7 @@ button[type=submit] {
         margin-top: 5px;
         margin-bottom: 10px;
     }
-    .acct textarea {
+    #acct textarea {
         vertical-align: top;
         border: 2px solid #F99FFF;
         border-radius: 1em;
@@ -1645,47 +1777,27 @@ button[type=submit] {
     }
 
     /*-----------TEAM-----------*/
-    
-    .team {
-        box-sizing: border-box;
-        font-size: 1em;
-        border: 0.45em solid #9250C5;
-        border-radius: 30px;
-        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 5;
-        text-align: left;
-        font-size: 1em;
-    }
+
     .wrapper {
         overflow: auto;
         height: 87%;
         padding: .5em;
         margin: 1em;
     }
-    .team h2 {
-        font-family: marvin-round, sans-serif;
-        color: #FFB56C;
-        font-size: 2.5em;
-        margin: 0;
-        text-align: center;
-    }
-    .team h3 {
+    #team h3 {
         font-size: 1em;
         font-weight: 600;
         text-align: right;
     }
-    .team hr {
+    #team hr {
         border: 1px solid rgba(76, 37, 105, 0.432);
         margin: 0 auto;
         margin-top: .5em;
     }
-    .team img {
+    #team img {
         width: 80%;
     }
-    .teamtext {
+    #teamtext {
         text-align: left;
         line-height: 1.2em;
         font-weight: 100;
@@ -1693,56 +1805,36 @@ button[type=submit] {
     
     /*-----------CONTACT-----------*/
 
-    .contact {
-        box-sizing: border-box;
-        font-size: 1em;
-        height: auto;
-        border: 0.6em solid #9250C5;
-        border-radius: 30px;
-        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row: 3;
-        align-self: flex-start;
-    }
     .blurb {
         font-size: 1em;
         padding-left: 3em;
         padding-right: 3em;
     }
-    .contact h2 {
-        font-family: marvin-round, sans-serif;
-        color: #FFB56C;
-        font-size: 2em;
-        margin: 0;
-        text-align: center;
-    }
-    .contact hr {
+    #contact hr {
         clear: both;
         border: 1px solid rgba(76, 37, 105, 0.432);
     }
-    .contact form {
+    #contact form {
         padding-left: 1em;
         padding-right: 1em;
     }
-    .contact form hr {
+    #contact form hr {
         width: 100%;
     }
-    .contact input, .contact select {
+    #contact select {
         float: right;
         margin-right: 0;
     }
-    .contact input[type=text] {
+    #contact input[type=text], #contact input[type=email] {
         border: 2px solid #FFB56C;
         border-radius: 50em;
         padding-left: .8em;
         width: 15em;
         padding-right: .8em;
+        float: right;
+        margin-right: 0;
     }
-    .contact input[type=email] {
-        width: 15em;
-    }
-    .contact textarea {
+    #contact textarea {
         vertical-align: top;
         border: 2px solid #FFB56C;
         border-radius: 1em;
@@ -1753,12 +1845,65 @@ button[type=submit] {
         float: right;
         margin-bottom: 1em;
     }
-    input[type="radio"] {
-        float: none;
-        width: 2em;
-    }
     .radio {
         text-align: right;
         margin-right: 0;
+    }
+
+    /*-----------PROFILE-----------*/
+
+    .magenta {
+        box-sizing: border-box;
+        font-size: 1em;
+        border: 0.6em solid #F99FFF;
+        border-radius: 30px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 3;
+        text-align: left;
+        padding: .3em 1em;
+        align-self: flex-start;
+    }
+    .magenta h2 {
+        font-family: marvin-round, sans-serif;
+        color: #9250C5;
+        font-size: 2em;
+        margin: 0;
+        text-align: center;
+    }
+    .profile-picture {
+        float: left;
+        width: 6em;
+        margin: auto 1em 1em 1em;
+        border: 1px solid #FFB56C;
+        border-radius: .5em;
+    }
+    .profile-blurb {
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    #profile-pets {
+        grid-row: 4 !important; 
+    }
+    .pets1 {
+        width: 14vw;
+        border: 1px solid #F99FFF;
+        border-radius: 15px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        margin: 1em 1fr 1em 1fr;
+        float: left;
+    }
+    .pets2 {
+        width: 14vw;
+        border: 1px solid #F99FFF;
+        border-radius: 15px;
+        box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
+        margin: 1em 1fr 1em 1fr;
+        float: right;
+    }
+    .pets1:hover, .pets2:hover {
+        opacity: 0.5;
+        transition: 0.2s
     }
 }
