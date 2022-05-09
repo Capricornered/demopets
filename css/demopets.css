@@ -1891,7 +1891,6 @@ button[type=submit] {
         border: 1px solid #F99FFF;
         border-radius: 15px;
         box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        margin: 1em 1fr 1em 1fr;
         float: left;
     }
     .pets2 {
@@ -1899,7 +1898,6 @@ button[type=submit] {
         border: 1px solid #F99FFF;
         border-radius: 15px;
         box-shadow:3px 3px 5px rgba(0, 0, 0, 0.16);
-        margin: 1em 1fr 1em 1fr;
         float: right;
     }
     .pets1:hover, .pets2:hover {
