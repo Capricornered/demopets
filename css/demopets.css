@@ -139,10 +139,11 @@ body {
     text-align: center;
 }
 
-/*center elements that don't require other styling*/
-.center {
+/*video element*/ 
+.vid {
     display: block;
     margin: 0 auto;
+    width: 90%;
 }
 
 hr {
@@ -732,10 +733,11 @@ button[type=submit] {
         text-align: center;
     }
 
-    /*center elements that don't require other styling*/
-    .center {
+    /*video element*/ 
+    .vid {
         display: block;
         margin: 0 auto;
+        width: 90%;
     }
 
     /*HEADER*/
@@ -1310,10 +1312,11 @@ button[type=submit] {
         text-align: center;
     }
 
-    /*center elements that don't require other styling*/
-    .center {
+    /*video element*/ 
+    .vid {
         display: block;
         margin: 0 auto;
+        width: 90%;
     }
 
     /*HEADER*/
